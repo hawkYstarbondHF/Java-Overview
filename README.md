@@ -35,22 +35,16 @@ on a Mac/Linux terminal, including codespaces
 
 ## Project Objectives
 
-This assignment is to refresh our basic understanding of Java on a fundamental level. This includes basic arithmetic operations, String operations, arrays, recursion, reading files, and creating Classes. 
+TODO: Explain the point of this assignment in your own words with a brief paragraph. Say what the code does.
 
 ## Files
 
-**Edited Files** 
-* JavaOverview.java: The location of the 6 exercises & their helper methods. Filled out by student.
-
-**Other Files:**
-* JavaOverviewTest.java: A set of tests to ensure the methods in JavaOverview.java are working.
-* numbers.txt: A file of integers, one per line, to be used in exercise 5.
-* feedback.txt: A file to be filled out by Professor Schrum.
+TODO: Bulleted list with brief description of each file
 
 ## Known Issues
 
-Everything is functioning correctly.
+TODO: Describe any problems with your submission, or indicate that you believe everything functions correctly.
 
 ## Author
 
-**Eleanor Wagner**
+**NAME HERE**
