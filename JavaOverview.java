@@ -32,7 +32,7 @@ import java.util.Scanner;
  * all formatting must match the specification exactly.
  * 
  * @author Jacob Schrum, Last modified 6/11/2023                        
- * @author ADD YOUR NAME, ADD DATE
+ * @author Eleanor Wagner, ADD DATE
  */
 public class JavaOverview {                
 
@@ -81,13 +81,49 @@ public class JavaOverview {
 	 * @return Computed sum
 	 */
 	public static int exercise1() {
-		// TODO: Write according to the specification above.
-		return -1; // TODO: Change
+		// first number >= 200 that is divisible by 13, 13 - remainder of 200/13
+		int sum = 200 + 13 - (200%13);
+		
+		for(int i = sum+13; i <= 1287; i += 13) {
+			sum += i;
+		}
+
+		System.out.println("The sum is: " + sum);
+		
+		return sum;
 	}
+<<<<<<< HEAD
 
 ///////////////////////////////////////////////////////
 
 	/**
+=======
+	
+///////////////////////////////////////////////////////
+
+	/**
+	 * 
+	 * 
+	 * @param 
+	 * @param  
+	 * @return 
+	*/
+	public static String firstLongerShorter(String first, String second) throws IllegalArgumentException {
+		String s = "";
+		if(first.length() >= second.length()) { 
+			s += first.substring(0, 1);
+			s += second.substring(0, 1);
+		} else {
+			s += second.substring(0, 1);
+			s += first.substring(0, 1);
+		}
+
+		return s;
+	}
+
+
+	/**
+>>>>>>> 42e5fcf (Functional 1-3)
 	 * Exercise 2: Strings
 	 * 6 points functionality, 7 points documentation
 	 * 
@@ -108,6 +144,7 @@ public class JavaOverview {
 	 * examples.
 	 */
 	public static void exercise2() {
+<<<<<<< HEAD
 		// TODO: Uncomment to test your completed method.
 		//       Turn in your code with these lines uncommented. 
 //		System.out.println(firstLongerShorter("Hello","Bye"));
@@ -116,10 +153,29 @@ public class JavaOverview {
 //		System.out.println(firstLongerShorter("abc","1"));
 //		System.out.println(firstLongerShorter("abc","123"));
 //		System.out.println(firstLongerShorter("123","abc"));
+=======
+		System.out.println(firstLongerShorter("Hello","Bye"));
+		System.out.println(firstLongerShorter("Bye","Hello"));
+		System.out.println(firstLongerShorter("1","abc"));
+		System.out.println(firstLongerShorter("abc","1"));
+		System.out.println(firstLongerShorter("abc","123"));
+		System.out.println(firstLongerShorter("123","abc"));
+>>>>>>> 42e5fcf (Functional 1-3)
 	}
 
 ///////////////////////////////////////////////////////
 
+<<<<<<< HEAD
+=======
+	public static void moveToEnd(int[] arr, int pos) {
+		int end = arr[pos];
+		for(int i = pos; i < arr.length; i++) {
+			if(i == arr.length - 1) { arr[i] = end; }
+			else { arr[i] = arr[i+1]; }
+		}
+	}
+
+>>>>>>> 42e5fcf (Functional 1-3)
 	/**
 	 * Exercise 3: Arrays
 	 * 8 points functionality, 7 points documentation
@@ -141,12 +197,27 @@ public class JavaOverview {
 	 */
 	public static void exercise3() {
 		// TODO: Define the array oneToTen here
+<<<<<<< HEAD
 		
 		// TODO: Uncomment this line to test your method.
 		//       Turn in your code with this line uncommented.
 		//moveToEnd(oneToTen, 4);
 		
 		// TODO: Print the array contents here
+=======
+		int[] oneToTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		// TODO: Uncomment this line to test your method.
+		//       Turn in your code with this line uncommented.
+		moveToEnd(oneToTen, 4);
+		
+		// TODO: Print the array contents here
+		for(int i = 0; i < oneToTen.length; i++) {
+			System.out.print(oneToTen[i]);
+			if(i < oneToTen.length - 1) { System.out.print(", "); }
+		}
+		System.out.println();
+>>>>>>> 42e5fcf (Functional 1-3)
 	}
 
 ///////////////////////////////////////////////////////
@@ -303,4 +374,8 @@ public class JavaOverview {
 //		double paycheck3 = e2.pay();
 //		System.out.printf("Employee 2 earns $%.2f for %d hours of work.\n",paycheck3,hours3);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42e5fcf (Functional 1-3)
 }   

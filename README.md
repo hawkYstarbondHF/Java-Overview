@@ -47,4 +47,4 @@ TODO: Describe any problems with your submission, or indicate that you believe e
 
 ## Author
 
-**NAME HERE**
+**Eleanor Wagner**
