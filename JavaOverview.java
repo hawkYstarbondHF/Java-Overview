@@ -92,12 +92,6 @@ public class JavaOverview {
 		
 		return sum;
 	}
-<<<<<<< HEAD
-
-///////////////////////////////////////////////////////
-
-	/**
-=======
 	
 ///////////////////////////////////////////////////////
 
@@ -123,7 +117,6 @@ public class JavaOverview {
 
 
 	/**
->>>>>>> 42e5fcf (Functional 1-3)
 	 * Exercise 2: Strings
 	 * 6 points functionality, 7 points documentation
 	 * 
@@ -144,29 +137,16 @@ public class JavaOverview {
 	 * examples.
 	 */
 	public static void exercise2() {
-<<<<<<< HEAD
-		// TODO: Uncomment to test your completed method.
-		//       Turn in your code with these lines uncommented. 
-//		System.out.println(firstLongerShorter("Hello","Bye"));
-//		System.out.println(firstLongerShorter("Bye","Hello"));
-//		System.out.println(firstLongerShorter("1","abc"));
-//		System.out.println(firstLongerShorter("abc","1"));
-//		System.out.println(firstLongerShorter("abc","123"));
-//		System.out.println(firstLongerShorter("123","abc"));
-=======
 		System.out.println(firstLongerShorter("Hello","Bye"));
 		System.out.println(firstLongerShorter("Bye","Hello"));
 		System.out.println(firstLongerShorter("1","abc"));
 		System.out.println(firstLongerShorter("abc","1"));
 		System.out.println(firstLongerShorter("abc","123"));
 		System.out.println(firstLongerShorter("123","abc"));
->>>>>>> 42e5fcf (Functional 1-3)
 	}
 
 ///////////////////////////////////////////////////////
 
-<<<<<<< HEAD
-=======
 	public static void moveToEnd(int[] arr, int pos) {
 		int end = arr[pos];
 		for(int i = pos; i < arr.length; i++) {
@@ -175,7 +155,6 @@ public class JavaOverview {
 		}
 	}
 
->>>>>>> 42e5fcf (Functional 1-3)
 	/**
 	 * Exercise 3: Arrays
 	 * 8 points functionality, 7 points documentation
@@ -197,14 +176,6 @@ public class JavaOverview {
 	 */
 	public static void exercise3() {
 		// TODO: Define the array oneToTen here
-<<<<<<< HEAD
-		
-		// TODO: Uncomment this line to test your method.
-		//       Turn in your code with this line uncommented.
-		//moveToEnd(oneToTen, 4);
-		
-		// TODO: Print the array contents here
-=======
 		int[] oneToTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		
 		// TODO: Uncomment this line to test your method.
@@ -217,7 +188,6 @@ public class JavaOverview {
 			if(i < oneToTen.length - 1) { System.out.print(", "); }
 		}
 		System.out.println();
->>>>>>> 42e5fcf (Functional 1-3)
 	}
 
 ///////////////////////////////////////////////////////
@@ -374,8 +344,4 @@ public class JavaOverview {
 //		double paycheck3 = e2.pay();
 //		System.out.printf("Employee 2 earns $%.2f for %d hours of work.\n",paycheck3,hours3);
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 42e5fcf (Functional 1-3)
 }   
