@@ -97,12 +97,17 @@ public class JavaOverview {
 
 	/**
 	 * 
+	 * To ensure an IllegalArgumentException is thrown instead of a NullPointerException, check if either
+	 * parameter is null or is empty.
 	 * 
-	 * @param 
-	 * @param  
-	 * @return 
+	 * @param first String
+	 * @param second String
+	 * @return A String with exactly 2 characters
 	*/
 	public static String firstLongerShorter(String first, String second) throws IllegalArgumentException {
+		// to ensure 
+		if(first == null || second == null || first.isEmpty() || second.isEmpty()) { throw new IllegalArgumentException(); }
+		
 		String s = "";
 		if(first.length() >= second.length()) { 
 			s += first.substring(0, 1);
@@ -175,14 +180,12 @@ public class JavaOverview {
 	 * 1, 2, 3, 4, 6, 7, 8, 9, 10, 5
 	 */
 	public static void exercise3() {
-		// TODO: Define the array oneToTen here
+		// array to test
 		int[] oneToTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		
-		// TODO: Uncomment this line to test your method.
-		//       Turn in your code with this line uncommented.
 		moveToEnd(oneToTen, 4);
 		
-		// TODO: Print the array contents here
+		// print the array separated by commas
 		for(int i = 0; i < oneToTen.length; i++) {
 			System.out.print(oneToTen[i]);
 			if(i < oneToTen.length - 1) { System.out.print(", "); }
@@ -226,12 +229,12 @@ public class JavaOverview {
 	public static void exercise4() {
 		// TODO: Uncomment to test your completed methods.
 		//       Turn in your code with these lines uncommented. 
-//		System.out.println(recursiveSeq(5));
-//		System.out.println(dynamicSeq(5));
-//		System.out.println(recursiveSeq(8));
-//		System.out.println(dynamicSeq(8));
-//		System.out.println(recursiveSeq(15));
-//		System.out.println(dynamicSeq(15));
+		System.out.println(recursiveSeq(5));
+		System.out.println(dynamicSeq(5));
+		System.out.println(recursiveSeq(8));
+		System.out.println(dynamicSeq(8));
+		System.out.println(recursiveSeq(15));
+		System.out.println(dynamicSeq(15));
 	}
 	
 	/**
@@ -241,18 +244,43 @@ public class JavaOverview {
 	 * @return n-th value in the sequence
 	 */
 	public static long recursiveSeq(int n) {
-		return -1; // TODO: Change this
+		if(n < 0) { throw new IllegalArgumentException(); }
+		
+		if(n < 3) {
+			return n+1;
+		}
+		
+		return recursiveSeq(n-3) + recursiveSeq(n-1);
 	}
 
 	/**
 	 * Compute the sequence described in the comment for
 	 * exercise 4 using dynamic programming. This will require
 	 * the use of an auxiliary array. DO NOT USE RECURSION!
+	 * 
 	 * @param n Position in the sequence
 	 * @return n-th value in the sequence
 	 */
 	public static long dynamicSeq(int n) {
-		return -1; // TODO: Change this
+		if(n < 0) { throw new IllegalArgumentException(); }
+
+		long[] fib = new long[n];
+		
+		if(n < 3) {
+			return n+1;
+		}
+		else { 
+			for(int i = 0; i < n; i++) {
+				if(i < 3) {
+					fib[i] = i+1;
+				}
+				else {
+					fib[i] = fib[i-3] + fib[i-1];
+				}
+			}
+		}
+		
+		return fib[n-3] + fib[n-1]; 
 	}
 
 ///////////////////////////////////////////////////////
@@ -283,7 +311,33 @@ public class JavaOverview {
 	 *  
 	 */
 	public static void exercise5() {
-		// TODO: Write according to the specification above.
+		try {
+			// https://www.w3schools.com/java/java_files_read.asp
+			Scanner scan = new Scanner(new File("numbers.txt"));
+			
+			// initialize
+			int max = scan.nextInt();
+			double sum = (double) max;
+			int count = 1;
+			int temp;
+			// using .hasNextLine() throws java.util.NoSuchElementException, must use .hasNext().
+			while(scan.hasNext()) {
+				temp = scan.nextInt();
+
+				if(temp > max) {
+					max = temp;
+				}
+				sum += temp;
+				count++;
+			}
+			scan.close(); // close Scanner
+
+			System.out.println("Maximum value: " + max);
+			System.out.println("Average value: " + (sum/count));
+		}
+		catch (FileNotFoundException e) {
+			System.out.println("The file \"numbers.txt\" does not exist. Exiting.");
+		}
 	}
 
 ///////////////////////////////////////////////////////
