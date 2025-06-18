@@ -367,35 +367,54 @@ public class JavaOverview {
 		 * TODO: Descriptive comment.
 		 */
 		class Employee {
+			private double salary;
+			private int hours;
+
+			public Employee(double rate) {
+				salary = rate;
+				hours = 0;
+			}
+
+			public void work(int x) {
+				hours += x;
+			}
+			public int getUnpaidHours() {
+				return hours;
+			}
+			public double pay() {
+				double wage = getUnpaidHours() * salary;
+				hours = 0;
+				return wage;
+			}
 			// TODO: Define the class as described above.
 		}
 		
 		// TODO: Uncomment to test your completed class.
 		//       Turn in your code with these lines uncommented. 
-//		Employee e1 = new Employee(8.25);
-//		e1.work(8);
-//		e1.work(8);
-//		e1.work(8);
-//		e1.work(8);
-//		e1.work(8);
-//		int hours1 = e1.getUnpaidHours();
-//		double paycheck1 = e1.pay();
-//		System.out.printf("Employee 1 earns $%.2f for %d hours of work.\n",paycheck1,hours1);
-//		e1.work(10);
-//		e1.work(8);
-//		e1.work(8);
-//		int hours2 = e1.getUnpaidHours();
-//		double paycheck2 = e1.pay();
-//		System.out.printf("Employee 1 earns $%.2f for %d hours of work.\n",paycheck2,hours2);
-//		
-//		Employee e2 = new Employee(15.10);
-//		e2.work(8);
-//		e2.work(10);
-//		e2.work(10);
-//		e2.work(6);                
-//		e2.work(6);
-//		int hours3 = e2.getUnpaidHours();
-//		double paycheck3 = e2.pay();
-//		System.out.printf("Employee 2 earns $%.2f for %d hours of work.\n",paycheck3,hours3);
+		Employee e1 = new Employee(8.25);
+		e1.work(8);
+		e1.work(8);
+		e1.work(8);
+		e1.work(8);
+		e1.work(8);
+		int hours1 = e1.getUnpaidHours();
+		double paycheck1 = e1.pay();
+		System.out.printf("Employee 1 earns $%.2f for %d hours of work.\n",paycheck1,hours1);
+		e1.work(10);
+		e1.work(8);
+		e1.work(8);
+		int hours2 = e1.getUnpaidHours();
+		double paycheck2 = e1.pay();
+		System.out.printf("Employee 1 earns $%.2f for %d hours of work.\n",paycheck2,hours2);
+		
+		Employee e2 = new Employee(15.10);
+		e2.work(8);
+		e2.work(10);
+		e2.work(10);
+		e2.work(6);                
+		e2.work(6);
+		int hours3 = e2.getUnpaidHours();
+		double paycheck3 = e2.pay();
+		System.out.printf("Employee 2 earns $%.2f for %d hours of work.\n",paycheck3,hours3);
 	}
 }   
